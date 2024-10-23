@@ -13,7 +13,7 @@ router.post("/animals", (req, res) => {
 module.exports = router;
 
 //Consultar todos los animales
-router.get("/animals", verifyToken, (req, res) => {
+router.get("/animals", (req, res) => {
     animalSchema.find()
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
